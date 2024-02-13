@@ -4,7 +4,7 @@
 [![Unit tests](https://github.com/avitase/fast_frechet-python/actions/workflows/run_tests.yml/badge.svg)](https://codecov.io/gh/avitase/fast_frechet-python)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-**Find C++/SIMD/CUDA implementations of the algorithms [here][fast_frechet-cpp]**
+**Find C++/SIMD/CUDA implementations of the algorithms [here][fast_frechet-cpp].**
 
 This is Python package that provides a collection of different implementations for calculating the discrete [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance) between two polygonal curves.
 
