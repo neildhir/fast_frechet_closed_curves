@@ -10,10 +10,13 @@ def frechet_maxmin(acc, x):
 
 
 def frechet_next(v, d):
-    v[1:] = np.minimum(v[:-1], v[1:])
-
-    init = max(v[0], d[0])
-    return list(accumulate(zip(v[1:], d[1:]), frechet_maxmin, initial=init))
+    return list(
+        accumulate(
+            zip(np.minimum(v[:-1], v[1:]), d[1:]),
+            frechet_maxmin,
+            initial=max(v[0], d[0]),
+        )
+    )
 
 
 def frechet_distance(p, q, metric):
