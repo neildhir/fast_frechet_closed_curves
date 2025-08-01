@@ -29,7 +29,7 @@ Implementations of all these variants can be found under [`fast_frechet/`](fast_
 ```bash
 # production installation
 $ pip install -r requirements.txt
-$ pip install fast_frechet
+$ pip install -e .
 
 # development installation
 $ pip install -e .[dev]
