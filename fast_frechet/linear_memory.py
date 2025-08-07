@@ -58,6 +58,12 @@ def frechet_distance_closed_curves(p: np.ndarray, q: np.ndarray, metric: Callabl
         The discrete Fréchet distance between the two closed curves (loops).
     """
 
+    # Ensure the loop isn't represented with a duplicate start/end point - when people store the coordinates for a closed loop, they often do it in one of two ways: implicit closure or explicit closure. In explicit closure representation the start and end points are stored as separate points. The roll function which we use later only works when the start and end points are unique i.e. implicit closure.
+    if np.array_equal(p[0], p[-1]):
+        p = p[:-1]
+    if np.array_equal(q[0], q[-1]):
+        q = q[:-1]
+
     min_dist = float("inf")
 
     # Calculate the Fréchet distance for every cyclic shift of q
